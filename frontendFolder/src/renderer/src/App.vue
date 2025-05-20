@@ -12,7 +12,7 @@ onMounted(() => {
   rail.value = true
 })
 
-const handleToggleDrawer = () => {
+const handleToggleDrawer = (): void => {
   if (drawerVisible.value) {
     rail.value = !rail.value
   } else {
@@ -26,7 +26,7 @@ const selectedModel = ref(null)
 const contentModels = ref(ContentModels)
 const sentData = ref(null)
 
-const handleSend = () => {
+const handleSend = (): void => {
   const dataToSend = {
     prompt: prompt.value,
     selectedModel: selectedModel.value,
@@ -40,7 +40,7 @@ const handleSend = () => {
 }
 
 const loading = ref(false)
-function load() {
+function load(): void {
   loading.value = true
   setTimeout(() => (handleSend(), (loading.value = false)), 3000)
 }

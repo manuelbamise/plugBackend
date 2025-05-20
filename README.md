@@ -1,9 +1,31 @@
-# plug
-contains the files, folders and assets for the frontend and backend of the application
+# Plug backend
+This is the backend for the plug application using nestjs
+## Project setup
 
 
-Essentially the baseline function of the application is to take user prompt and an information model they choose and pass it to the backend, which then
-  + webscrapes the internet or use the searchAPI to get current information based on the user prompt.
-we then pass the response from this and pass it to the llm and have it generate content ideas,potential taglines, tags, description etc for the prompt.
+```bash
+$ npm install
+```
 
-  + or we just pass the user prompt directly to the llm and based on the model chosen by the user, the llm generates the response and then passes it to the UI.
+## Compile and run the project
+
+```bash
+# watch mode
+$ npm run start:dev
+
+# production mode
+$ npm run start:prod
+```
+
+## Run tests
+
+```bash
+# unit tests
+$ npm run test
+
+# e2e tests
+$ npm run test:e2e
+
+# test coverage
+$ npm run test:cov
+```
